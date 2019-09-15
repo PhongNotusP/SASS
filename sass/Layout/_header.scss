@@ -1,0 +1,25 @@
+.header{
+    background-image: linear-gradient(to right bottom, rgba(139, 139, 97, 0.5),
+    rgba(31, 31, 92, 0.5)),url('../img/hinh4.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    height: 90vh;
+    clip-path: ellipse(67% 79% at 50% 13%);
+
+    &__text-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    &__logo{
+        height: 100px;
+    }
+    &__logo-box{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+}

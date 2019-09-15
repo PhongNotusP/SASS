@@ -1,0 +1,63 @@
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-grey;
+    padding: 20px;
+}
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    animation-name: animationtest;
+    animation-duration: 2s;
+    animation-iteration-count: 1; /*so lan lap lai*/
+    animation-delay: 1.5s;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; THONG SO */
+    &--main{
+        display: block;
+        font-size: 6.2rem;
+        font-weight: 400;
+        letter-spacing: 8px;
+        animation: moveleft 2s ease-out;
+    }
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 8px;
+        animation: moveright 2s ease-out;
+    }
+}
+
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 750;
+    display: inline-block;
+    letter-spacing: 2rem;
+    cursor: pointer;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    color: transparent;
+    -webkit-background-clip: text;
+    transition: all .2s;
+    
+    &:hover{
+        transform: skewY(10deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .6); 
+    }
+}
+
+.heading-tertiary{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-size: 2rem;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
