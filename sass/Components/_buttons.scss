@@ -17,6 +17,13 @@
             background-color: $color-white;
         }
     }
+    &--blue{
+        background-color: rgb(90, 126, 224);
+        color: $color-white;
+        &::after{
+            background-color: rgb(90, 126, 224);
+        }
+    }
     &:hover{
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba($color-black, .5);
