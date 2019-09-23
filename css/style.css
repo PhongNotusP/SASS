@@ -84,6 +84,10 @@ body {
   .heading-secondary:hover {
     transform: skewY(7deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.6); }
+  .heading-secondary__testimonial:hover {
+    background-image: linear-gradient(to right, #eb80d3, #914480) !important;
+    transform: skewX(12deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(235, 128, 211, 0.6); }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -232,6 +236,10 @@ body {
   position: relative;
   padding: 5rem 0; }
 
+.section-enroll {
+  padding: 8rem 0;
+  background-image: linear-gradient(to bottom left, #8e9efc, #1c3eff); }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -263,7 +271,7 @@ body {
     .composition__photo:hover .composition__photo__photo:not(:hover) {
       transform: scale(0.9); }
     .composition__photo:hover {
-      outline: 1.5rem solid #5a73fc;
+      outline: 0.8rem groove #ebabf3;
       transform: scale(1.2);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
@@ -390,7 +398,7 @@ body {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
   font-size: 1.6rem;
   border-radius: 100rem;
-  background-color: rgba(255, 255, 255, 0.15); }
+  background-color: rgba(255, 255, 255, 0.9); }
   .testimonial__shape {
     position: relative;
     width: 15rem;
@@ -403,7 +411,8 @@ body {
     shape-outside: circle(50% at 50% 50%); }
   .testimonial__img {
     width: 100%;
-    transform: translateY(3rem); }
+    transform: translateY(1rem);
+    transition: all .3s; }
   .testimonial__caption {
     position: absolute;
     top: 50%;
@@ -413,4 +422,35 @@ body {
     text-transform: uppercase;
     font-size: 1.7rem;
     text-align: center;
-    opacity: 0; }
+    opacity: 0;
+    transition: all .3s; }
+  .testimonial:hover .testimonial__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .testimonial:hover .testimonial__img {
+    filter: blur(0.5rem) brightness(70%);
+    transform: scale(1.05); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .8;
+  overflow: hidden;
+  clip-path: polygon(50% 0%, 100% 10%, 100% 85%, 50% 100%, 0 85%, 0 10%); }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.enroll {
+  background-image: radial-gradient(150% 200% ellipse at -15%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("/img/lap.PNG");
+  background-size: cover;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 5rem;
+  height: 50rem; }
+  .enroll__form {
+    padding: 6rem; }

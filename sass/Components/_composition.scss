@@ -24,7 +24,7 @@
             transform: scale(.9);
         }
         &:hover{
-            outline: 1.5rem solid $color-primary;
+            outline: .8rem groove  rgb(235, 171, 243);
             transform: scale(1.2);
             box-shadow: 0 2.5rem 4rem rgba($color: $color-black, $alpha: .5);
             z-index: 20;
