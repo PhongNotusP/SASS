@@ -39,15 +39,15 @@
         clip-path: ellipse(80% 70% at 50% 30%);
         &--1{
             background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark),
-            url('/img/card1.jpg');
+            url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943273/imgsass/card1.jpg');
         }
         &--2{
             background-image: linear-gradient(to right, rgba($color-secondary-light,.9),rgba($color-secondary-dark,.9)),
-            url('/img/card2.jpg');
+            url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943273/imgsass/card2.jpg');
         }
         &--3{
             background-image: linear-gradient(to right, $color-tertiary-light,$color-tertiary-dark),
-            url('/img/card3.jpg');
+            url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943273/imgsass/card3.jpg');
         }
     }
     &__heading{
