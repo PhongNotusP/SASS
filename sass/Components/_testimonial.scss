@@ -23,6 +23,7 @@
         width: 100%;
         transform: translateY(1rem);
         transition:  all .3s;
+        background-size:cover;
     }
     &__caption{
         position: absolute;
@@ -44,6 +45,6 @@
     &:hover &__img{
         filter: blur(.5rem) brightness(70%); //độ nhòe - độ sáng
         transform: scale(1.05);
-
+        background-size:cover;
     }
 }

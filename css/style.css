@@ -412,7 +412,8 @@ body {
   .testimonial__img {
     width: 100%;
     transform: translateY(1rem);
-    transition: all .3s; }
+    transition: all .3s;
+    background-size: cover; }
   .testimonial__caption {
     position: absolute;
     top: 50%;
@@ -429,7 +430,8 @@ body {
     transform: translate(-50%, -50%); }
   .testimonial:hover .testimonial__img {
     filter: blur(0.5rem) brightness(70%);
-    transform: scale(1.05); }
+    transform: scale(1.05);
+    background-size: cover; }
 
 .bg-video {
   position: absolute;
@@ -454,3 +456,81 @@ body {
   height: 50rem; }
   .enroll__form {
     padding: 6rem; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  color: inherit;
+  border: none;
+  border-radius: 1rem;
+  border-bottom: 3px solid transparent;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 55%; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid #5a73fc; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #ff7730; }
+  .form__input::-webkit-input-placeholder {
+    color: #777777; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+  transition: all .3s; }
+
+.form__label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .8rem;
+  display: block;
+  transition: all .3s; }
+
+.form__radio-group {
+  width: 45%;
+  display: inline-block; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 5rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10rem;
+  border: 0.5rem solid #5a73fc;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.5rem; }
+
+.form__radio-button::after {
+  opacity: 0;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  border: 0.5rem solid #5a73fc;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5a73fc; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
+.form__radio-input {
+  display: none; }
