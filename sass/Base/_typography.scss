@@ -21,14 +21,16 @@ body{
         font-size: 6.2rem;
         font-weight: 400;
         letter-spacing: 8px;
-        animation: moveleft 2s ease-out;
+        animation: moveleft 3s ease-out;
+        animation-delay: 6s;
     }
     &--sub{
         display: block;
-        font-size: 2rem;
+        font-size: 2.8rem;
         font-weight: 700;
         letter-spacing: 8px;
-        animation: moveright 2s ease-out;
+        animation: moveright 3s ease-out;
+        animation-delay: 6s;
     }
 }
 
