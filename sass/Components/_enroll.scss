@@ -1,12 +1,28 @@
-.enroll{
-    background-image: radial-gradient(150% 200% ellipse at -15%, rgba($color-white,.8) 50%, transparent 50%),
-    url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943275/imgsass/lap.png'); 
+.enroll {
+    @include respond(tab-land) {
+        background-image: radial-gradient(150% 200% ellipse at -15%, rgba($color-white, .8)0%, rgba($color-white, .8)65%, transparent), url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943275/imgsass/lap.png');
+    }
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(to right, rgba($color-white, .8)0%, rgba($color-white, .8)65%, transparent), url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943275/imgsass/lap.png');
+    }
+
+    background-image: radial-gradient(150% 200% ellipse at -15%, rgba($color-white, .8) 50%, transparent 50%),
+    url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943275/imgsass/lap.png');
     background-size: cover;
     box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .2);
     border-radius: 5rem;
     height: 50rem;
 
-    &__form{
+    &__form {
+        @include respond(tab-land) {
+            width: 65%;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
         padding: 6rem;
     }
 }

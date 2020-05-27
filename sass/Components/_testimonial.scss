@@ -1,4 +1,14 @@
-.testimonial{
+.testimonial {
+    @include respond(tab-port) {
+        width: 140%;
+        margin-left: -20%;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+        margin-left: auto;
+    }
+
     margin: 0 auto;
     width: 80%;
     padding: 6rem;
@@ -8,7 +18,7 @@
     border-radius: 100rem;
     background-color: rgba($color: $color-white, $alpha: .9);
 
-    &__shape{
+    &__shape {
         position: relative;
         width: 15rem;
         height: 15rem;
@@ -19,32 +29,35 @@
         margin-top: -1rem;
         shape-outside: circle(50% at 50% 50%);
     }
-    &__img{
+
+    &__img {
         width: 100%;
         transform: translateY(1rem);
-        transition:  all .3s;
-        background-size:cover;
+        transition: all .3s;
+        background-size: cover;
     }
-    &__caption{
+
+    &__caption {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,20%);
+        transform: translate(-50%, 20%);
         color: $color-white;
         text-transform: uppercase;
         font-size: 1.7rem;
         text-align: center;
         opacity: 0;
-        transition:  all .3s;
+        transition: all .3s;
     }
 
-    &:hover &__caption{
+    &:hover &__caption {
         opacity: 1;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
-    &:hover &__img{
+
+    &:hover &__img {
         filter: blur(.5rem) brightness(70%); //độ nhòe - độ sáng
         transform: scale(1.05);
-        background-size:cover;
+        background-size: cover;
     }
 }

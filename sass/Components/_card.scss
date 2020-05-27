@@ -1,56 +1,72 @@
-.card{
+.card {
+    @include respond(tab-port) {
+        height: auto;
+    }
+
     perspective: 150rem; //***
     position: relative;
-    height: 45rem;
-    &__side{
+    height: auto; //45rem
+
+    &__side {
         color: white;
         font-size: 2rem;
         height: 45rem;
         transition: all .8s ease;
-        position: absolute;
+        position: relative; //absolute
         top: 0;
         left: 0;
         width: 100%;
-        backface-visibility: hidden;   //giấu phần back đi 
-        box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
-        border-radius: 5rem;
+        backface-visibility: hidden; //giấu phần back đi 
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        border-radius: 5rem 5rem 0rem 0rem; //5rem
         overflow: hidden;
-        &--front{
+
+        &--front {
             background-color: $color-white;
         }
-        &--back{
+
+        &--back {
             background-color: green;
-            transform: rotateY(180deg);
-            &-1{
-                background-image: linear-gradient(to left bottom, $color-primary-light,$color-primary-dark);
+            transform: rotateY(0); //rotateY(180deg)
+            border-radius: 0rem 0rem 5rem 5rem; // không có
+
+            &-1 {
+                background-image: linear-gradient(to left bottom, $color-primary-light, $color-primary-dark);
             }
-            &-2{
-                background-image: linear-gradient(to left bottom, $color-secondary-light,$color-secondary-dark);
+
+            &-2 {
+                background-image: linear-gradient(to left bottom, $color-secondary-light, $color-secondary-dark);
             }
-            &-3{
-                background-image: linear-gradient(to left bottom, $color-tertiary-light,$color-tertiary-dark);
+
+            &-3 {
+                background-image: linear-gradient(to left bottom, $color-tertiary-light, $color-tertiary-dark);
             }
         }
     }
-    &__picture{
+
+    &__picture {
         background-size: cover;
         background-blend-mode: screen; //****
         height: 23rem;
         clip-path: ellipse(80% 70% at 50% 30%);
-        &--1{
-            background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark),
-            url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943273/imgsass/card1.jpg');
+
+        &--1 {
+            background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark),
+                url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943273/imgsass/card1.jpg');
         }
-        &--2{
-            background-image: linear-gradient(to right, rgba($color-secondary-light,.9),rgba($color-secondary-dark,.9)),
-            url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943273/imgsass/card2.jpg');
+
+        &--2 {
+            background-image: linear-gradient(to right, rgba($color-secondary-light, .9), rgba($color-secondary-dark, .9)),
+                url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943273/imgsass/card2.jpg');
         }
-        &--3{
-            background-image: linear-gradient(to right, $color-tertiary-light,$color-tertiary-dark),
-            url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943273/imgsass/card3.jpg');
+
+        &--3 {
+            background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark),
+                url('https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943273/imgsass/card3.jpg');
         }
     }
-    &__heading{
+
+    &__heading {
         font-size: 2.8rem;
         font-weight: 300;
         text-align: right;
@@ -60,70 +76,82 @@
         top: 12rem;
         right: 2rem;
         width: 75%;
-        &-span{
+
+        &-span {
             border-radius: 5rem;
             padding: 1rem 1.5rem;
-            -webkit-box-decoration-break: clone;  //*****
-            &--1{
-                background-image: linear-gradient(to right bottom, rgba($color-primary-light,.85),
-                rgba($color-primary-dark,.85));
+            -webkit-box-decoration-break: clone; //*****
+
+            &--1 {
+                background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85),
+                        rgba($color-primary-dark, .85));
             }
-            &--2{
-                background-image: linear-gradient(to right bottom, rgba($color-secondary-light,.85),
-                rgba($color-secondary-dark,.85));
+
+            &--2 {
+                background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85),
+                        rgba($color-secondary-dark, .85));
             }
-            &--3{
-                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light,.85),
-                rgba($color-tertiary-dark,.85));
+
+            &--3 {
+                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85),
+                        rgba($color-tertiary-dark, .85));
             }
         }
     }
-    &__details{
+
+    &__details {
         padding: 3rem;
         color: $color-grey;
-        ul{
+
+        ul {
             list-style: none;
             width: 70%;
             margin: 0 auto;
-            li{
+
+            li {
                 text-align: center;
                 font-size: 1.5rem;
                 padding: 1rem;
-                &:not(:last-child)
-                {
+
+                &:not(:last-child) {
                     border-bottom: 1px solid #dbdbdb;
                 }
             }
         }
     }
 
-    &__cta{
-        position: absolute;
-        transform: translate(-50%,-50%); // }
-        top: 50%; //                        }
-        left: 50%; //                       }
+    &__cta {
+        position: relative;
+        transform: translate(0); // (-50%,-50%)
+        top: 0%; // 50%     
+        left: 0%; // 50%           
         text-align: center;
-        width: 90%; // để chữ enrol trên cùng 1 dòng phải để width 90% 
+        width: 100%; // để chữ enrol trên cùng 1 dòng phải để width 90% 
+        padding: 4rem; // không có
     }
-    &__price-box{
+
+    &__price-box {
         text-align: center;
         color: $color-white;
-        margin-bottom: 8rem;
+        margin-bottom: 3rem; //8rem
     }
-    &__price-only{
+
+    &__price-only {
         font-size: 1.4rem;
         text-transform: uppercase;
     }
-    &__price-value{
+
+    &__price-value {
         font-size: 6rem;
         font-weight: 100;
         margin-bottom: 5rem;
     }
 
-    &:hover &__side--front{
-        transform: rotateY(-180deg);
+    &:hover &__side--front {
+        transform: rotateY(0); //-180deg
     }
-    &:hover &__side--back{
+
+    &:hover &__side--back {
         transform: rotateY(0);
     }
 }

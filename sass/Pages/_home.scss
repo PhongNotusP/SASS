@@ -1,11 +1,16 @@
-.section-about{
+.section-about {
+    @include respond(phone) {
+        padding: 20rem 0;
+        margin-top: -40rem;
+    }
+
     background-color: $color-grey-light;
     padding: 25rem 0;
     margin-top: -25rem;
 }
-.section-skills{
-    background-image: linear-gradient(to left top,rgba(38, 49, 41, 0.6),rgba(141, 125, 53, 0.6))
-    ,url("https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943275/imgsass/yaiba.png");
+
+.section-skills {
+    background-image: linear-gradient(to left top, rgba(38, 49, 41, 0.6), rgba(141, 125, 53, 0.6)), url("https://res.cloudinary.com/dyogxjwr7/image/upload/v1572943275/imgsass/yaiba.png");
     background-size: cover;
     position: relative;
     padding: 20rem 0;
@@ -13,17 +18,20 @@
     clip-path: ellipse(70% 50% at 50% 50%);
     margin-top: -20rem;
 }
-.section-courses{
+
+.section-courses {
     background-color: rgb(255, 254, 253);
     padding: 25rem 0 10rem 0;
     margin-top: -20rem;
 }
-.section-testimonials{
+
+.section-testimonials {
     position: relative;
     padding: 5rem 0;
-    
+
 }
-.section-enroll{
+
+.section-enroll {
     padding: 8rem 0;
     background-image: linear-gradient(to bottom left, $color-primary-light, $color-primary-dark);
 }
