@@ -1,24 +1,57 @@
 .card {
     @include respond(tab-port) {
         height: auto;
+
+        &__side {
+            border-radius: 5rem 5rem 0rem 0rem;
+            position: relative;
+            height: auto;
+
+            &--back {
+                transform: rotateY(0);
+                border-radius: 0rem 0rem 5rem 5rem;
+            }
+
+            &:hover &__side--front {
+                transform: rotateY(0);
+            }
+        }
+
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 4rem;
+        }
+
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+
+        &__price-value {
+            font-size: 6rem;
+        }
+
     }
 
     perspective: 150rem; //***
     position: relative;
-    height: auto; //45rem
+    height: 45rem;
 
     &__side {
         color: white;
         font-size: 2rem;
         height: 45rem;
         transition: all .8s ease;
-        position: relative; //absolute
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         backface-visibility: hidden; //giấu phần back đi 
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-        border-radius: 5rem 5rem 0rem 0rem; //5rem
+        border-radius: 5rem;
         overflow: hidden;
 
         &--front {
@@ -27,8 +60,7 @@
 
         &--back {
             background-color: green;
-            transform: rotateY(0); //rotateY(180deg)
-            border-radius: 0rem 0rem 5rem 5rem; // không có
+            transform: rotateY(180deg); //rotateY(180deg)
 
             &-1 {
                 background-image: linear-gradient(to left bottom, $color-primary-light, $color-primary-dark);
@@ -121,19 +153,19 @@
     }
 
     &__cta {
-        position: relative;
-        transform: translate(0); // (-50%,-50%)
-        top: 0%; // 50%     
-        left: 0%; // 50%           
+        position: absolute;
+        transform: translate(-50%, -50%); // (-50%,-50%)
+        top: 50%;
+        left: 50%;
         text-align: center;
-        width: 100%; // để chữ enrol trên cùng 1 dòng phải để width 90% 
-        padding: 4rem; // không có
+        width: 90%; // để chữ enrol trên cùng 1 dòng phải để width 90% 
+
     }
 
     &__price-box {
         text-align: center;
         color: $color-white;
-        margin-bottom: 3rem; //8rem
+        margin-bottom: 8rem;
     }
 
     &__price-only {
@@ -148,7 +180,7 @@
     }
 
     &:hover &__side--front {
-        transform: rotateY(0); //-180deg
+        transform: rotateY(-180deg);
     }
 
     &:hover &__side--back {

@@ -362,29 +362,48 @@ body {
 .card {
   perspective: 150rem;
   position: relative;
-  height: auto; }
+  height: 45rem; }
   @media (max-width: 900px) {
     .card {
-      height: auto; } }
+      height: auto; }
+      .card__side {
+        border-radius: 5rem 5rem 0rem 0rem;
+        position: relative;
+        height: auto; }
+        .card__side--back {
+          transform: rotateY(0);
+          border-radius: 0rem 0rem 5rem 5rem; }
+        .card__side:hover .card__side__side--front {
+          transform: rotateY(0); }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 4rem; }
+      .card__price-box {
+        margin-bottom: 3rem; }
+      .card__price-value {
+        font-size: 6rem; } }
   .card__side {
     color: white;
     font-size: 2rem;
     height: 45rem;
     transition: all .8s ease;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    border-radius: 5rem 5rem 0rem 0rem;
+    border-radius: 5rem;
     overflow: hidden; }
     .card__side--front {
       background-color: #fff; }
     .card__side--back {
       background-color: green;
-      transform: rotateY(0);
-      border-radius: 0rem 0rem 5rem 5rem; }
+      transform: rotateY(180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to left bottom, #8e9efc, #1c3eff); }
       .card__side--back-2 {
@@ -436,17 +455,16 @@ body {
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #dbdbdb; }
   .card__cta {
-    position: relative;
-    transform: translate(0);
-    top: 0%;
-    left: 0%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     text-align: center;
-    width: 100%;
-    padding: 4rem; }
+    width: 90%; }
   .card__price-box {
     text-align: center;
     color: #fff;
-    margin-bottom: 3rem; }
+    margin-bottom: 8rem; }
   .card__price-only {
     font-size: 1.4rem;
     text-transform: uppercase; }
@@ -455,7 +473,7 @@ body {
     font-weight: 100;
     margin-bottom: 5rem; }
   .card:hover .card__side--front {
-    transform: rotateY(0); }
+    transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
 
